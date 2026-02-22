@@ -1,0 +1,143 @@
+/*--------------------------------------------------------------
+HOME SECTION STYLES
+--------------------------------------------------------------*/
+
+#home {
+    background: url(./images/planets.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 350px;
+    padding-bottom: 500px;
+    color: #fff;
+/*--------------------------------------------------------------
+NAVIGATION
+--------------------------------------------------------------*/
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.menu-container {
+    max-height: 340px;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+}
+
+/*--------------------------------------------------------------
+NAVIGATION
+--------------------------------------------------------------*/
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.menu-container {
+    max-height: 340px;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+GALLERY
+--------------------------------------------------------------*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-container {
+    margin: 10px;
+}
+
+.photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.photo-overlay {
+    text-align: center;
+    padding: 10px;
+}
+
+/*--------------------------------------------------------------
+RSVP FORM
+--------------------------------------------------------------*/
+
+.form-rsvp input {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.submit input {
+    background-color: #E91C1C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
