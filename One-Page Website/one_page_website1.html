@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Website</title>
+    <link rel="stylesheet" href="CSS/one_page_website.css">
+</head>
+
+<body>
+
+<h1>Welcome to My Website</h1>
+<p>This is my one-page website.</p>
+
+<!-- IMAGE GALLERY -->
+<div class="gallery">
+    <img class="lightbox-img" src="images/thumbs/photo1_small.jpg" data-large="images/large/photo1_large.jpg" alt="Photo 1">
+    <img class="lightbox-img" src="images/thumbs/photo2_small.jpg" data-large="images/large/photo2_large.jpg" alt="Photo 2">
+    <img class="lightbox-img" src="images/thumbs/photo3_small.jpg" data-large="images/large/photo3_large.jpg" alt="Photo 3">
+</div>
+
+<!-- CONTACT FORM -->
+<form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <input type="submit" value="Send">
+</form>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-image">
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="JS/one_page_website.js"></script>
+
+</body>
+</html>
+

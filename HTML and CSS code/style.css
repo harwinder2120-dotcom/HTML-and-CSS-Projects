@@ -1,0 +1,54 @@
+/* Reset some default spacing */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Container for image + text */
+.image-wrapper {
+    position: relative;
+    width: 600px;
+    margin: 40px auto;
+}
+
+/* The image */
+.image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/* The text on top of the image */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Text over image section */
+.image-wrapper {
+    position: relative;
+    width: 600px;
+    margin: 40px auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}

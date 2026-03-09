@@ -1,27 +1,104 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <head>
     <meta charset="UTF-8">
-    <title>One Page Website</title>
+    <title>Book Haven</title>
     <link rel="stylesheet" href="CSS/one_page_website.css">
-<link rel="stylesheet" href="CSS/one_page_website.css">
-
 </head>
 
-</head>
 <body>
 
-<h1>Welcome to My Website</h1>
-<p>This is my one-page website.</p>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#video">Video</a> |
+        <a href="#contact">Contact</a> |
+        <a href="#footer">Footer</a>
+    </nav>
 
-<form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
-    <input type="submit" value="Send">
-</form>
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Book Haven</h1>
+        <p>Your cozy corner for discovering new stories, genres, and recommendations.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Featured Books</h2>
+        <p>A few of our favorite reads:</p>
+
+        <div class="gallery">
+
+            <!-- Image 1 -->
+            <img class="lightbox-img"
+                 src="https://images.pexels.com/photos/35600/road-sun-rays-path.jpg?auto=compress&cs=tinysrgb&w=300"
+                 data-large="https://images.pexels.com/photos/35600/road-sun-rays-path.jpg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Enchanted Forest">
+
+            <!-- Image 2 -->
+            <img class="lightbox-img"
+                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=60"
+                 data-large="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60"
+                 alt="Ancient Spellbooks">
+
+            <!-- Image 3 -->
+            <img class="lightbox-img"
+                 src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=300"
+                 data-large="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Fantasy Castle">
+
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Book Review of the Week</h2>
+        <p>Enjoy a short review from a popular book channel.</p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/8Zdp2h0yGxw"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2>Request a Book Recommendation</h2>
+        <p>Tell us what you enjoy reading, and we’ll suggest something perfect for you.</p>
+
+        <form action="#" method="post">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="genre">Favorite Genre:</label><br>
+            <input type="text" id="genre" name="genre" placeholder="Mystery, Romance, Sci‑Fi..."><br><br>
+
+            <label for="message">Anything else you'd like us to know?</label><br>
+            <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2026 Book Haven — Created by Harwinder</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="JS/one_page_website.js"></script>
 
 </body>
 </html>
