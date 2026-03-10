@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ============================
+   GLOBAL STYLES
+============================ */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,13 +9,22 @@ body {
     color: #333;
 }
 
-/* Header */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================
+   HEADER / NAVBAR
+============================ */
 header {
-    background: #0d47a1; /* Deep professional blue */
+    position: sticky;
+    top: 0;
+    background: #0d47a1;
     color: white;
-    padding: 30px 20px;
+    padding: 25px 20px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 100;
 }
 
 header h1 {
@@ -22,7 +33,6 @@ header h1 {
     font-weight: 600;
 }
 
-/* Navigation */
 nav {
     margin-top: 15px;
 }
@@ -36,10 +46,50 @@ nav a {
 }
 
 nav a:hover {
-    color: #bbdefb; /* Light blue hover */
+    color: #bbdefb;
 }
 
-/* Section Cards */
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Background video inside hero */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.35; /* soft fade so text is readable */
+}
+
+/* ============================
+   SECTION WRAPPER
+============================ */
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -58,27 +108,9 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Project List */
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0d47a1;
-    color: white;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* Project Cards */
+/* ============================
+   PROJECT GRID
+============================ */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -87,17 +119,25 @@ footer {
 }
 
 .project-card {
-    background: #ffffff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-left: 5px solid #1976d2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform .2s, box-shadow .2s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .project-card h3 {
@@ -121,4 +161,84 @@ footer {
 
 .project-card a:hover {
     text-decoration: underline;
+}
+
+/* ============================
+   GITHUB SECTION
+============================ */
+#github {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* ============================
+   CONTACT FORM
+============================ */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background: #1565c0;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d47a1;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ============================
+   FADE-IN ANIMATION
+============================ */
+section, .project-card, .hero {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================
+   MOBILE NAV TOGGLE
+============================ */
+nav.open {
+    background: #0d47a1;
+    padding: 10px 0;
 }
