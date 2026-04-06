@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Music Video Page</title>
+
+    <!-- CSS Styling -->
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #00eaff;
+            margin-top: 30px;
+            text-shadow: 0 0 10px black;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0077;
+            position: relative;
+            margin: 40px auto;
+            border-radius: 10px;
+        }
+
+        /* Spinning circle */
+        #circle {
+            width: 80px;
+            height: 80px;
+            border: 5px solid #00eaff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            margin: 20px auto;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Favorite Song</h1>
+
+    <!-- Embedded YouTube Video -->
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/d_HlPboLRL8?si=SuLw3tukhqnPU--S"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+    <h2>JavaScript Animation</h2>
+
+    <div id="box"></div>
+
+    <div id="circle"></div>
+
+    <!-- JavaScript Animation -->
+    <script>
+        let box = document.getElementById("box");
+        let pos = 0;
+        let direction = 1;
+        let hue = 0;
+
+        function animateBox() {
+            pos += direction * 2;
+
+            if (pos > 200 || pos < 0) {
+                direction *= -1;
+            }
+
+            hue = (hue + 2) % 360;
+
+            box.style.left = pos + "px";
+            box.style.backgroundColor = "hsl(" + hue + ", 100%, 50%)";
+
+            requestAnimationFrame(animateBox);
+        }
+
+        animateBox();
+    </script>
+
+</body>
+</html>
